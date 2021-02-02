@@ -1,0 +1,63 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Editar Cliente</h1>
+    <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)" class="data-container" *ngIf="client">
+
+      <div class="data-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input name="name" #name="ngModel" [(ngModel)]="client.name" [ngModelOptions]="{standalone: true}" matInput value="{{client.name}}">
+        </mat-form-field>
+        <br>
+
+        <div #phone *ngFor="let number of client.phone; let i = index; trackBy: customTrackBy"> 
+          <p>Teléfono #{{ i + 1 }}: </p> 
+          <mat-form-field appearance="fill">
+            <mat-label>Teléfono #{{ i + 1}}:</mat-label>
+            <input name="phone" #phone="ngModel" [(ngModel)]="client.phone[i]" [ngModelOptions]="{standalone: true}" matInput value="{{client.phone[i]}}">
+          </mat-form-field>
+        </div>
+        <a mat-stroked-button (click)="addAnotherPhoneNumber()">+</a> 
+        <a *ngIf="client.phone.length > 1" mat-stroked-button (click)="deleteAPhoneNumber()">-</a> 
+        <br>
+        <br>
+
+        <!--<mat-form-field appearance="fill">
+          <mat-label>Email(s)</mat-label>
+          <input name="email" #email="ngModel" [(ngModel)]="client.email" [ngModelOptions]="{standalone: true}" matInput value="{{client.email}}">
+        </mat-form-field>
+        <br>-->
+
+        <div class='location' #location *ngFor="let location of client.location; let i = index">
+          <p>Ubicación #{{ i + 1 }}: </p>
+          <mat-form-field appearance="fill" >
+            <mat-label>Dirección #{{ i + 1 }}</mat-label>
+            <input name="address" #address="ngModel" [(ngModel)]="location.address" [ngModelOptions]="{standalone: true}" matInput value="{{location.address}}">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Descripción #{{ i + 1 }}</mat-label>
+            <input name="addressDescription" #addressDescription="ngModel" [(ngModel)]="location.addressDescription" [ngModelOptions]="{standalone: true}" matInput value="{{location.addressDescription}}">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Coordenadas #{{ i + 1 }}</mat-label>
+            <input type="text" id="coordinates{{i}}" name="coordinates" #coordinates="ngModel" [(ngModel)]="location.coordinates" [ngModelOptions]="{standalone: true}" matInput value="{{location.coordinates}}">
+          </mat-form-field>
+          <a mat-stroked-button (click)="addGeolocation(i)"><mat-icon>explore</mat-icon></a> 
+          <br>
+        </div>
+        <a mat-stroked-button (click)="addAnotherLocation()">+</a> 
+        <a *ngIf="client.location.length > 1" mat-stroked-button (click)="deleteALocation()">-</a> 
+        <br>   
+
+      </div>
+
+      <div class="buttons-group">
+        <button mat-raised-button type="submit" color="primary">Actualizar</button>
+        <button mat-stroked-button [routerLink]="['/client/manage-clients/client-details', client._id]" color="primary">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>

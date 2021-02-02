@@ -1,0 +1,894 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>hide documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">hide documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RegisterProductComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/stocks/register-product/register-product.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente del registro de productos</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-register-product</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./register-product.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./register-product.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#description">description</a>
+                            </li>
+                            <li>
+                                <a href="#name">name</a>
+                            </li>
+                            <li>
+                                <a href="#price">price</a>
+                            </li>
+                            <li>
+                                <a href="#stock">stock</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getNameErrorMessage">getNameErrorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#getPriceErrorMessage">getPriceErrorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#getStockErrorMessage">getStockErrorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_productService: <a href="../injectables/ProductService.html">ProductService</a>, _router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor </p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNameErrorMessage"></a>
+                    <span class="name">
+                        <b>
+                            getNameErrorMessage
+                        </b>
+                        <a href="#getNameErrorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNameErrorMessage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Error cuando el campo de nombre está vacío</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;&quot; | &quot;Debes ingresar un nombre.&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPriceErrorMessage"></a>
+                    <span class="name">
+                        <b>
+                            getPriceErrorMessage
+                        </b>
+                        <a href="#getPriceErrorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPriceErrorMessage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Error al tratar de ingresar numeros negativos en el precio de productos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;&quot; | &quot;El precio mínimo es de $0&quot; | &quot;Debes ingresar un precio&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStockErrorMessage"></a>
+                    <span class="name">
+                        <b>
+                            getStockErrorMessage
+                        </b>
+                        <a href="#getStockErrorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStockErrorMessage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Error al tratar de ingresar numeros negativos en las existencias</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>función que inicializa el componente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit(form: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Solicitud de guardado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>datos del formulario</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="description"></a>
+                        <span class="name">
+                            <b>
+                            description</b>
+                            <a href="#description"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Descripcion del producto </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name">
+                            <b>
+                            name</b>
+                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>nombre del producto</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="price"></a>
+                        <span class="name">
+                            <b>
+                            price</b>
+                            <a href="#price"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required, Validators.min(0)])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Precio actual del producto</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stock"></a>
+                        <span class="name">
+                            <b>
+                            stock</b>
+                            <a href="#stock"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.min(0)])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/stocks/register-product/register-product.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Cantidad disponible de producto</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Product } from &#x27;src/app/_models/product.model&#x27;;
+import { ProductService } from &#x27;src/app/services/product.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { FormControl, Validators } from &#x27;@angular/forms&#x27;;
+/**
+ * Componente del registro de productos
+ */
+@Component({
+  selector: &#x27;app-register-product&#x27;,
+  templateUrl: &#x27;./register-product.component.html&#x27;,
+  styleUrls: [&#x27;./register-product.component.css&#x27;],
+  providers: [ProductService]
+})
+export class RegisterProductComponent implements OnInit {
+  /**
+   * nombre del producto
+   */
+  name &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  /** 
+   * Descripcion del producto 
+   * */
+  description &#x3D; new FormControl(&#x27;&#x27;);
+  /**
+   * Cantidad disponible de producto
+   */
+  stock &#x3D; new FormControl(&#x27;&#x27;, [Validators.min(0)]);
+  /**
+   * Precio actual del producto
+   */
+  price &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.min(0)]);
+
+  /**
+   * Constructor 
+   * @param _productService 
+   * @param _router 
+   */
+  constructor(
+    private _productService: ProductService,
+    private _router: Router
+  ) {
+  }
+
+  /**
+   * Error cuando el campo de nombre está vacío
+   */
+  getNameErrorMessage() {
+    return this.name.hasError(&#x27;required&#x27;) ? &#x27;Debes ingresar un nombre.&#x27; : &#x27;&#x27;;
+  }
+
+  /**
+   * Error al tratar de ingresar numeros negativos en las existencias
+   */
+  getStockErrorMessage() {
+    return &#x27;El stock mínimo es de 0 unidades&#x27;;
+  }
+
+  /**
+   * Error al tratar de ingresar numeros negativos en el precio de productos
+   */
+  getPriceErrorMessage() {
+    if (this.price.hasError(&#x27;min&#x27;))
+      return &#x27;El precio mínimo es de $0&#x27;
+
+    return this.price.hasError(&#x27;required&#x27;) ? &#x27;Debes ingresar un precio&#x27; : &#x27;&#x27;;
+  }
+
+  /**
+   * función que inicializa el componente
+   */
+  ngOnInit(): void {
+  }
+
+  /**
+   * Solicitud de guardado
+   * @param form datos del formulario
+   */
+  onSubmit(form: any) {
+    let product &#x3D; new Product(&#x27;&#x27;, this.name.value, this.description.value, this.stock.value, this.price.value);
+    this._productService.saveProduct(product).subscribe(
+      response &#x3D;&gt; {
+        if (response.product)
+          this._router.navigate([&#x27;/stocks&#x27;]);
+      },
+      error &#x3D;&gt; {
+        console.log(&lt;any&gt;error);
+      }
+    );
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;section-container&quot;&gt;
+
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+
+    &lt;h1&gt;Registrar Producto&lt;/h1&gt;
+    &lt;form #productForm&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForm)&quot; class&#x3D;&quot;data-container&quot; &gt;
+
+      &lt;div class&#x3D;&quot;data-group&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Nombre&lt;/mat-label&gt;
+          &lt;!-- &lt;input name&#x3D;&quot;name&quot; #name&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;product.name&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; [formControl]&#x3D;&quot;name&quot; required&gt; --&gt;
+          &lt;input matInput type&#x3D;&quot;text&quot; [formControl]&#x3D;&quot;name&quot; required&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;name.invalid&quot;&gt;{{getNameErrorMessage()}}&lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+        &lt;br&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Descripción&lt;/mat-label&gt;
+          &lt;!-- &lt;input name&#x3D;&quot;description&quot; #description&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;product.description&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;[formControl]&#x3D;&quot;description&quot; matInput&gt; --&gt;
+          &lt;input matInput type&#x3D;&quot;text&quot; [formControl]&#x3D;&quot;description&quot;&gt;
+        &lt;/mat-form-field&gt;
+        &lt;br&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Existencias&lt;/mat-label&gt;
+          &lt;!-- &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; name&#x3D;&quot;stock&quot; #stock&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;product.stock&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; [formControl]&#x3D;&quot;stock &quot; matInput &gt; --&gt;
+          &lt;input matInput type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; [formControl]&#x3D;&quot;stock&quot;&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;stock.invalid&quot;&gt;{{getStockErrorMessage()}}&lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+        &lt;br&gt;        
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Precio (MXN)&lt;/mat-label&gt;
+          &lt;!-- &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; name&#x3D;&quot;price&quot; #price&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;product.price&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; matInput [formControl]&#x3D;&quot;price&quot; required&gt; --&gt;
+          &lt;input matInput type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; [formControl]&#x3D;&quot;price&quot; required&gt;
+          &lt;span matPrefix&gt;$&amp;nbsp;&lt;/span&gt; 
+          &lt;mat-error *ngIf&#x3D;&quot;price.invalid&quot;&gt;{{getPriceErrorMessage()}}&lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+        &lt;br&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;buttons-group&quot;&gt;
+        &lt;button mat-raised-button type&#x3D;&quot;submit&quot; color&#x3D;&quot;primary&quot;&gt;Crear&lt;/button&gt;
+        &lt;button mat-stroked-button [routerLink]&#x3D;&quot;[&#x27;/stocks&#x27;]&quot; color&#x3D;&quot;primary&quot;&gt;Cancelar&lt;/button&gt;
+      &lt;/div&gt;
+
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./register-product.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="section-container">  <div class="container">    <h1>Registrar Producto</h1>    <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="data-container" >      <div class="data-group">        <mat-form-field appearance="fill">          <mat-label>Nombre</mat-label>          <!-- <input name="name" #name="ngModel" [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}" [formControl]="name" required> -->          <input matInput type="text" [formControl]="name" required>          <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>        </mat-form-field>        <br>        <mat-form-field appearance="fill">          <mat-label>Descripción</mat-label>          <!-- <input name="description" #description="ngModel" [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}"[formControl]="description" matInput> -->          <input matInput type="text" [formControl]="description">        </mat-form-field>        <br>        <mat-form-field appearance="fill">          <mat-label>Existencias</mat-label>          <!-- <input type="number" min="0" name="stock" #stock="ngModel" [(ngModel)]="product.stock" [ngModelOptions]="{standalone: true}" [formControl]="stock " matInput > -->          <input matInput type="number" min="0" [formControl]="stock">          <mat-error *ngIf="stock.invalid">{{getStockErrorMessage()}}</mat-error>        </mat-form-field>        <br>                <mat-form-field appearance="fill">          <mat-label>Precio (MXN)</mat-label>          <!-- <input type="number" min="0" name="price" #price="ngModel" [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}" matInput [formControl]="price" required> -->          <input matInput type="number" min="0" [formControl]="price" required>          <span matPrefix>$&nbsp;</span>           <mat-error *ngIf="price.invalid">{{getPriceErrorMessage()}}</mat-error>        </mat-form-field>        <br>      </div>      <div class="buttons-group">        <button mat-raised-button type="submit" color="primary">Crear</button>        <button mat-stroked-button [routerLink]="[\'/stocks\']" color="primary">Cancelar</button>      </div>    </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminMenuComponent', 'selector': 'app-admin-menu'},{'name': 'AdminUsersComponent', 'selector': 'app-admin-users'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClientComponent', 'selector': 'app-client'},{'name': 'ClientDetailsComponent', 'selector': 'app-client-details'},{'name': 'ClientOrderComponent', 'selector': 'app-client-order'},{'name': 'ClientsMenuComponent', 'selector': 'app-clients-menu'},{'name': 'ConfirmOrderComponent', 'selector': 'app-confirm-order'},{'name': 'CreateUserComponent', 'selector': 'app-create-user'},{'name': 'DeleteClientComponent', 'selector': 'app-delete-client'},{'name': 'DeleteOrderComponent', 'selector': 'app-delete-order'},{'name': 'DeleteProductComponent', 'selector': 'app-delete-product'},{'name': 'DeleteUserComponent', 'selector': 'app-delete-user'},{'name': 'DeliveringOrderDetailsComponent', 'selector': 'app-delivering-order-details'},{'name': 'DeliveringOrdersInprogressComponent', 'selector': 'app-delivering-orders-inprogress'},{'name': 'EditClientComponent', 'selector': 'app-edit-client'},{'name': 'EditStockComponent', 'selector': 'app-edit-stock'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotpasswordComponent', 'selector': 'app-forgotpassword'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LoginformComponent', 'selector': 'app-loginform'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageClientsComponent', 'selector': 'app-manage-clients'},{'name': 'ManageStocksComponent', 'selector': 'app-manage-stocks'},{'name': 'NewOrderComponent', 'selector': 'app-new-order'},{'name': 'NotFoundComponent', 'selector': 'app-notfound'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrdersComponent', 'selector': 'app-orders'},{'name': 'OrdersInprogressComponent', 'selector': 'app-orders-inprogress'},{'name': 'ProductOrderComponent', 'selector': 'app-new-order'},{'name': 'QrproductinfoComponent', 'selector': 'app-qrproductinfo'},{'name': 'RegisterClientComponent', 'selector': 'app-register-client'},{'name': 'RegisterProductComponent', 'selector': 'app-register-product'},{'name': 'ResetpasswordComponent', 'selector': 'app-resetpassword'},{'name': 'SalesComponent', 'selector': 'app-sales'},{'name': 'SalesHistoryComponent', 'selector': 'app-sales-history'},{'name': 'SalesMenuComponent', 'selector': 'app-sales-menu'},{'name': 'StocksComponent', 'selector': 'app-stocks'},{'name': 'StocksHistoryComponent', 'selector': 'app-stocks-history'},{'name': 'StocksMenuComponent', 'selector': 'app-stocks-menu'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'ViewStocksComponent', 'selector': 'app-view-stocks'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RegisterProductComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RegisterProductComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

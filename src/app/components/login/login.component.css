@@ -1,0 +1,54 @@
+.container {    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;   
+}
+
+.main-container {    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 70%;
+  width: 200px;   
+}
+
+#background-top-img {
+  left: 0px;
+  top: 0px;
+  position:fixed;
+  z-index: -1;
+}
+
+#background-bot-img {
+  right: 0px;
+  bottom: 0px;
+  position:fixed;
+  z-index: -1;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+}
+
+.input-login {
+  width: 250px;
+  margin-bottom: 13px;  
+}
+
+.button-login {  
+  width: 200px;
+  margin-bottom: 13px;
+}
+
+p {
+  text-align: left;
+}

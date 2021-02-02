@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">  
+
+  <span>{{route}}</span>
+
+  <span class="example-spacer"></span>    
+
+  <button mat-icon-button [matMenuTriggerFor]="options" >
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #options="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="currency">
+      <mat-icon>attach_money</mat-icon>
+      <span>Cambiar divisa</span>
+    </button>
+    <mat-menu #currency="matMenu">
+      <button mat-menu-item (click)="changeCurrentCoinToMXN()">MXN</button>
+      <button mat-menu-item (click)="changeCurrentCoinToUSD()">USD</button>
+      <button mat-menu-item (click)="changeCurrentCoinToEUR()">EUR</button>
+    </mat-menu>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>login</mat-icon>
+      <span>Cerrar sesión</span>
+    </button>
+  </mat-menu>
+  
+</mat-toolbar>

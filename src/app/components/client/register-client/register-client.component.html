@@ -1,0 +1,59 @@
+<div class="section-container">
+
+    <div class="container">
+  
+      <h1>Registrar Cliente</h1>
+      <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)" class="data-container" *ngIf="client">
+
+        <div class="data-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="client.name" [ngModelOptions]="{standalone: true}" matInput required>
+            <mat-error *ngIf="name.touched && !name.valid">Debes ingresar un nombre.</mat-error>
+          </mat-form-field>
+          <br>
+
+          <div #phone *ngFor="let number of client.phone; let i = index; trackBy: customTrackBy"> 
+            <p>Teléfono #{{ i + 1 }}: </p> 
+            <mat-form-field appearance="fill">
+                <mat-label>Teléfono #{{ i + 1 }}:</mat-label>
+                <input type="number" name="phone" #phone="ngModel" [(ngModel)]="client.phone[i]" [ngModelOptions]="{standalone: true}" matInput required>
+            </mat-form-field>
+          </div>
+          <mat-error *ngIf="error === 'phone'">Error al tratar de crear un nuevo usuario, el número: {{ errorValue }} ya existe.</mat-error>
+          <a mat-stroked-button (click)="addAnotherPhoneNumber()">+</a> 
+          <a *ngIf="client.phone.length > 1" mat-stroked-button (click)="deleteAPhoneNumber()">-</a> 
+          <br>
+          <br>
+
+          <div class="location" #location *ngFor="let location of client.location; let i = index; trackBy: customTrackBy">
+            <p>Ubicación #{{ i + 1 }}: </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Dirección #{{ i + 1 }}</mat-label>
+                <input name="address" #address="ngModel" [(ngModel)]="location.address" [ngModelOptions]="{standalone: true}" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Descripción #{{ i + 1 }}</mat-label>
+                <input name="addressDescription" #addressDescription="ngModel" [(ngModel)]="location.addressDescription" [ngModelOptions]="{standalone: true}" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Coordenadas #{{ i + 1 }}</mat-label>
+                <input type="text" id="coordinates{{i}}" name="coordinates{{i}}" #coordinates{{i}}="ngModel" [(ngModel)]="location.coordinates" [ngModelOptions]="{standalone: true}" matInput value="">
+            </mat-form-field>
+            <a mat-stroked-button (click)="addGeolocation(i)"><mat-icon>explore</mat-icon></a> 
+            <br>
+          </div>
+            <a mat-stroked-button (click)="addAnotherLocation()">+</a> 
+            <a *ngIf="client.location.length > 1" mat-stroked-button (click)="deleteALocation()">-</a> 
+          <br>   
+ 
+        </div>
+  
+        <div class="buttons-group">
+          <button mat-raised-button type="submit" color="primary">Crear</button>
+          <button mat-stroked-button [routerLink]="['/client']" color="primary">Cancelar</button>
+        </div>
+  
+      </form>
+    </div>
+  </div>

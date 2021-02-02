@@ -1,0 +1,782 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>hide documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">hide documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/_common/header/header.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/CurrencyService.html" target="_self" >CurrencyService</a></code>
+                                <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-header</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./header.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currency">currency</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeCurrentCoinToEUR">changeCurrentCoinToEUR</a>
+                            </li>
+                            <li>
+                                <a href="#changeCurrentCoinToMXN">changeCurrentCoinToMXN</a>
+                            </li>
+                            <li>
+                                <a href="#changeCurrentCoinToUSD">changeCurrentCoinToUSD</a>
+                            </li>
+                            <li>
+                                <a href="#getCurrency">getCurrency</a>
+                            </li>
+                            <li>
+                                <a href="#logout">logout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#route">route</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_currencyService: <a href="../injectables/CurrencyService.html">CurrencyService</a>, _authService: <a href="../injectables/AuthService.html">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/_common/header/header.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_currencyService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CurrencyService.html" target="_self" >CurrencyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="route"></a>
+                        <b>route</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/_common/header/header.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeCurrentCoinToEUR"></a>
+                    <span class="name">
+                        <b>
+                            changeCurrentCoinToEUR
+                        </b>
+                        <a href="#changeCurrentCoinToEUR"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeCurrentCoinToEUR()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeCurrentCoinToMXN"></a>
+                    <span class="name">
+                        <b>
+                            changeCurrentCoinToMXN
+                        </b>
+                        <a href="#changeCurrentCoinToMXN"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeCurrentCoinToMXN()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeCurrentCoinToUSD"></a>
+                    <span class="name">
+                        <b>
+                            changeCurrentCoinToUSD
+                        </b>
+                        <a href="#changeCurrentCoinToUSD"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeCurrentCoinToUSD()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCurrency"></a>
+                    <span class="name">
+                        <b>
+                            getCurrency
+                        </b>
+                        <a href="#getCurrency"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCurrency()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <b>
+                            logout
+                        </b>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/_common/header/header.component.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currency"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currency</b>
+                            <a href="#currency"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Currency.html" target="_self" >Currency</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/_common/header/header.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { Currency } from &#x27;src/app/_models/currency.model&#x27;;
+import { CurrencyService } from &#x27;src/app/services/currency.service&#x27;;
+import { Global } from &#x27;src/app/services/global&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-header&#x27;,
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [&#x27;./header.component.css&#x27;],
+  providers: [CurrencyService, AuthService]
+})
+export class HeaderComponent implements OnInit {
+  public currency!: Currency;
+
+  @Input() route &#x3D; &#x27;&#x27;;
+
+  constructor(
+    private _currencyService: CurrencyService,
+    private _authService: AuthService,
+    private router: Router,
+  ) { }
+
+  ngOnInit(): void {
+    this.getCurrency();
+  }
+
+  changeCurrentCoinToMXN() {
+    Global.current_coin_value &#x3D; this.currency.rates.MXN;
+    Global.current_coin &#x3D; &quot;MXN&quot;;
+    this.router.navigate([&#x27;stocks&#x27;]);
+  }
+
+  changeCurrentCoinToUSD() {
+    Global.current_coin_value &#x3D; this.currency.rates.USD;
+    Global.current_coin &#x3D; &quot;USD&quot;;
+    this.router.navigate([&#x27;stocks&#x27;]);
+  }
+
+  changeCurrentCoinToEUR() {
+    Global.current_coin_value &#x3D; this.currency.rates.EUR;
+    Global.current_coin &#x3D; &quot;EUR&quot;;
+    this.router.navigate([&#x27;stocks&#x27;]);
+  }
+
+  getCurrency() {
+    this._currencyService.getMXNRates().subscribe(
+      response &#x3D;&gt; {
+        this.currency &#x3D; response;
+      },
+      error &#x3D;&gt; {
+        console.log(&lt;any&gt;error);
+      }
+    )
+  }
+
+  logout() {
+    this._authService.logout();
+    this.router.navigate([&#x27;login&#x27;]);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;  
+
+  &lt;span&gt;{{route}}&lt;/span&gt;
+
+  &lt;span class&#x3D;&quot;example-spacer&quot;&gt;&lt;/span&gt;    
+
+  &lt;button mat-icon-button [matMenuTriggerFor]&#x3D;&quot;options&quot; &gt;
+    &lt;mat-icon&gt;account_circle&lt;/mat-icon&gt;
+  &lt;/button&gt;
+  &lt;mat-menu #options&#x3D;&quot;matMenu&quot;&gt;
+    &lt;button mat-menu-item [matMenuTriggerFor]&#x3D;&quot;currency&quot;&gt;
+      &lt;mat-icon&gt;attach_money&lt;/mat-icon&gt;
+      &lt;span&gt;Cambiar divisa&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;mat-menu #currency&#x3D;&quot;matMenu&quot;&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;changeCurrentCoinToMXN()&quot;&gt;MXN&lt;/button&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;changeCurrentCoinToUSD()&quot;&gt;USD&lt;/button&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;changeCurrentCoinToEUR()&quot;&gt;EUR&lt;/button&gt;
+    &lt;/mat-menu&gt;
+    &lt;button mat-menu-item (click)&#x3D;&quot;logout()&quot;&gt;
+      &lt;mat-icon&gt;login&lt;/mat-icon&gt;
+      &lt;span&gt;Cerrar sesión&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/mat-menu&gt;
+  
+&lt;/mat-toolbar&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./header.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">mat-toolbar{
+  position: fixed;
+  width: 100%; 
+  z-index: 10;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">    <span>{{route}}</span>  <span class="example-spacer"></span>      <button mat-icon-button [matMenuTriggerFor]="options" >    <mat-icon>account_circle</mat-icon>  </button>  <mat-menu #options="matMenu">    <button mat-menu-item [matMenuTriggerFor]="currency">      <mat-icon>attach_money</mat-icon>      <span>Cambiar divisa</span>    </button>    <mat-menu #currency="matMenu">      <button mat-menu-item (click)="changeCurrentCoinToMXN()">MXN</button>      <button mat-menu-item (click)="changeCurrentCoinToUSD()">USD</button>      <button mat-menu-item (click)="changeCurrentCoinToEUR()">EUR</button>    </mat-menu>    <button mat-menu-item (click)="logout()">      <mat-icon>login</mat-icon>      <span>Cerrar sesión</span>    </button>  </mat-menu>  </mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminMenuComponent', 'selector': 'app-admin-menu'},{'name': 'AdminUsersComponent', 'selector': 'app-admin-users'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClientComponent', 'selector': 'app-client'},{'name': 'ClientDetailsComponent', 'selector': 'app-client-details'},{'name': 'ClientOrderComponent', 'selector': 'app-client-order'},{'name': 'ClientsMenuComponent', 'selector': 'app-clients-menu'},{'name': 'ConfirmOrderComponent', 'selector': 'app-confirm-order'},{'name': 'CreateUserComponent', 'selector': 'app-create-user'},{'name': 'DeleteClientComponent', 'selector': 'app-delete-client'},{'name': 'DeleteOrderComponent', 'selector': 'app-delete-order'},{'name': 'DeleteProductComponent', 'selector': 'app-delete-product'},{'name': 'DeleteUserComponent', 'selector': 'app-delete-user'},{'name': 'DeliveringOrderDetailsComponent', 'selector': 'app-delivering-order-details'},{'name': 'DeliveringOrdersInprogressComponent', 'selector': 'app-delivering-orders-inprogress'},{'name': 'EditClientComponent', 'selector': 'app-edit-client'},{'name': 'EditStockComponent', 'selector': 'app-edit-stock'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotpasswordComponent', 'selector': 'app-forgotpassword'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LoginformComponent', 'selector': 'app-loginform'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageClientsComponent', 'selector': 'app-manage-clients'},{'name': 'ManageStocksComponent', 'selector': 'app-manage-stocks'},{'name': 'NewOrderComponent', 'selector': 'app-new-order'},{'name': 'NotFoundComponent', 'selector': 'app-notfound'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrdersComponent', 'selector': 'app-orders'},{'name': 'OrdersInprogressComponent', 'selector': 'app-orders-inprogress'},{'name': 'ProductOrderComponent', 'selector': 'app-new-order'},{'name': 'QrproductinfoComponent', 'selector': 'app-qrproductinfo'},{'name': 'RegisterClientComponent', 'selector': 'app-register-client'},{'name': 'RegisterProductComponent', 'selector': 'app-register-product'},{'name': 'ResetpasswordComponent', 'selector': 'app-resetpassword'},{'name': 'SalesComponent', 'selector': 'app-sales'},{'name': 'SalesHistoryComponent', 'selector': 'app-sales-history'},{'name': 'SalesMenuComponent', 'selector': 'app-sales-menu'},{'name': 'StocksComponent', 'selector': 'app-stocks'},{'name': 'StocksHistoryComponent', 'selector': 'app-stocks-history'},{'name': 'StocksMenuComponent', 'selector': 'app-stocks-menu'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'ViewStocksComponent', 'selector': 'app-view-stocks'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

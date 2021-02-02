@@ -1,0 +1,24 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Información de producto</h1>
+    <div class="data-container">
+      <div class="data-group">        
+        <div class="data-item">
+          <p class="attribute">Producto:</p>
+          <p class="sub">{{product.name}}</p>
+        </div>
+        <div class="data-item">
+          <p class="attribute">Descripción:</p>
+          <p class="sub">{{product.description}}</p>
+        </div>
+        <div class="data-item">
+          <p class="attribute">Precio:</p>          
+          <p class="sub"> $&nbsp;{{product.price | number: '.2'}} MXN</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

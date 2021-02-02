@@ -1,0 +1,43 @@
+<div class="section-container">
+  
+  <div class="container">
+    
+    <h1>Existencias</h1>
+    <div class="list-container">      
+      
+      <div class="product-card" *ngFor="let product of products">           
+
+        <div class="card-header" *ngIf="router.url === '/stocks/manage-stocks'">
+          <!-- <button mat-icon-button color="primary" [routerLink]="['/product-info', product._id]"><span class="material-icons">edit</span></button> -->
+          <button mat-icon-button color="primary" [routerLink]="['/stocks/manage-stocks/edit-stock', product._id]"><span class="material-icons">edit</span></button>
+          <button mat-icon-button color="primary" (click)="openDialog(product._id)"><span class="material-icons">delete</span></button>
+        </div>
+        
+        <div class="card-content">
+          <div class="product-id">
+            <span class="material-icons">photo</span>
+            <div>          
+              <span>{{ product.name }}</span>
+              <p class="sub">{{ product.description }}</p>
+            </div>
+          </div>                  
+          <div class="product-data">
+            <div class="product-price">
+              <span matPrefix>$&nbsp;</span>           
+              <span>{{ product.price * currentCoinValue | number: '.2' }}</span>
+              <span> {{ currentCoin }} </span>
+            </div>
+            <div class="product-stock">
+              <span class="material-icons">kitchen</span>
+              <span>{{ product.stock }}</span>
+            </div>          
+          </div>
+        </div> 
+
+      </div>                      
+            
+    </div>
+    
+  </div>
+
+</div>

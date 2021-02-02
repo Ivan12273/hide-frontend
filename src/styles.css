@@ -1,0 +1,335 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*-------------------Tags------------------*/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+  font-weight: 500;
+}
+
+/*------------------------------------------*/
+/*----------------Containers----------------*/
+.menu-container {
+  height: 100%;  
+  width: 100%;  
+
+  display: flex;  
+  justify-content: center;  
+  align-items: center;
+}
+
+.section-container {
+  height: auto;  
+  width: 100%;  
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding-top: 10vh;
+  padding-bottom: 10vh;  
+}
+
+.menu-container > .container {  
+  height: 50vh;
+  width: 50vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;    
+  align-items: center;
+  align-content: space-between;
+}
+
+.section-container > .container {    
+  display: flex;  
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;    
+
+  width: 100%;    
+}
+
+/*------Contenedores de datos------*/
+.list-container {
+  display: flex;  
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 10vh;  
+  height: 70vh;
+  width: 90%;
+
+  gap: 20px;
+
+  overflow: auto;
+}
+
+.list-table{    
+  overflow: hidden;
+}
+/*--------------------------------*/
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+
+  margin-top: 10vh;  
+  height: 70vh;
+
+  overflow: auto;
+}
+
+.data-group {
+  display: block;
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;    
+}
+
+.buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 20px;
+  width: 30vw;
+  justify-content: space-evenly;  
+}
+
+/*------------------------------------------*/
+/*----------------Elements------------------*/
+
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;  
+  padding-right: 8px;
+
+  margin-bottom: 20px;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  /* width: 50vw;   */
+  padding-right: 8px;
+
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;  
+  align-items: center;
+}
+
+.data-item > p, .item > p {
+  margin-bottom: 0px;
+}
+
+.list-item button {
+  height: 40px;
+}
+
+.buttons-group button {
+  height: 40px;
+  width: 100px;
+}
+
+.attribute {
+  color: #1554F6;
+}
+
+.sub{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card {  
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 16px;
+  border-radius: 4px;
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  
+  height: 163px;
+  width: 346px;
+
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+
+  cursor: pointer;
+}
+
+.product-card {  
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 16px;
+
+  /*Para los botones de card-header*/
+  padding-top: 2px;
+  padding-right: 2px;
+  /*-------------------------------*/
+
+  border-radius: 4px;
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  
+  height: 110px;
+  width: 90%;
+  max-width: 500px;
+
+  display: flex;  
+  flex-direction: column;     
+  justify-content: flex-start;
+
+  cursor: pointer;
+}
+
+.card-header{
+  display: flex;  
+  flex-direction: row;
+  justify-content: flex-end;  
+}
+
+.card-content{
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.product-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  gap: 20px;
+  
+}
+
+.product-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+
+  padding-right: 16px;
+  gap: 25px;
+}
+
+.product-stock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-price {
+  color:red; 
+  font-weight: bolder;
+}
+
+/*---------------MatIcons-------------------*/
+.card .material-icons {font-size: 100px; color: #6202EE;}
+
+.product-id .material-icons {font-size: 70px; color: #6202EE;}
+
+.product-stock .material-icons {font-size: 25px;}
+/*------------------------------------------*/
+
+.container h1 {
+  padding-top: 10px;
+  position: fixed;
+}
+
+mat-dialog-content, mat-dialog-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+table {
+  width: 100%;  
+}
+
+/*------------------------------------------*/
+/*---------------Media queries--------------*/
+/*Desktop*/
+@media (max-width: 1512px) {
+  .menu-container > .container {      
+    width: 60vw;
+  }
+}
+
+/*Desktop*/
+@media (max-width: 1260px) {
+  .menu-container > .container {      
+    width: 80vw;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 950px) {
+  .menu-container > .container {      
+    height: 80vh;
+    width: 90vw;
+
+    justify-content: space-evenly;        
+    align-content: space-evenly;
+  }
+
+  .card {
+    height: 130px;
+    width: 346px;
+  }
+
+  .data-item, .list-item{    
+    width: 80vw;  
+  }
+
+  .buttons-group {    
+    width: 80vw;  
+  }
+}
+
+/*Mobile*/
+@media (max-height: 820px) {
+  .menu-container > .container {    
+    justify-content: space-evenly;        
+    align-content: space-evenly;
+  }
+
+  .card {
+    height: 80px;
+    width: 346px;
+  }
+  
+  .card .material-icons {
+    font-size: 60px;    
+  }
+}

@@ -1,0 +1,50 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Editar Producto</h1>
+    <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="data-container" >
+
+      <div class="data-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <!-- <input matInput type="text" [formControl]="name" required> -->
+          <!-- <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error> -->
+
+          <input name="name" #name="ngModel" [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}" matInput required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Descripción</mat-label>
+          <!-- <input matInput type="text" [formControl]="description"> -->
+          <input name="description" #description="ngModel" [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}" matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Existencias</mat-label>
+          <!-- <input matInput type="number" min="0" [formControl]="stock"> -->
+          <!-- <mat-error *ngIf="stock.invalid">{{getStockErrorMessage()}}</mat-error> -->
+          <input type="number" name="stock" #stock="ngModel" [(ngModel)]="product.stock" [ngModelOptions]="{standalone: true}" matInput required>
+        </mat-form-field>
+        <br>        
+        <mat-form-field appearance="fill">
+          <mat-label>Precio (MXN)</mat-label>
+          <input type="number" name="price" #price="ngModel" [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}" matInput required>
+          <!-- <input matInput type="number" min="0" [formControl]="price" required> -->
+          <span matPrefix>$&nbsp;</span>
+          <!-- <mat-error *ngIf="price.invalid">{{getPriceErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+        <br>
+        <div class="qr-container">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data={{urlFront}}product-info/{{product._id}}">
+        </div>
+      </div>
+
+      <div class="buttons-group">
+        <button mat-raised-button type="submit" color="primary">Actualizar</button>
+        <button mat-stroked-button [routerLink]="['/stocks/manage-stocks']" color="primary">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>

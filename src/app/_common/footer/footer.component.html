@@ -1,0 +1,32 @@
+<div id="footer-container">
+
+  <nav mat-tab-nav-bar [backgroundColor]="'primary'" animationDuration="0ms">
+  
+    <!--Ventas-->
+    <a [ngClass]="{'selected': url == '/sales'}" *ngIf="doIHavePermission(['ADMIN', 'SALES'])"
+     mat-tab-link routerLink="/sales" routerLinkActive="active" (click)="onClick('Ventas')"
+     label="Ventas"><mat-icon >shopping_cart</mat-icon></a>
+  
+    <!--Existencias-->
+    <a [ngClass]="{'selected': url == '/stocks'}" *ngIf="doIHavePermission(['ADMIN', 'STOCKS' ])"
+     mat-tab-link routerLink="/stocks" routerLinkActive="active" (click)="onClick('Existencias')"
+     label="Existencias"><mat-icon>kitchen</mat-icon></a>
+  
+    <!--Clientes-->
+    <a [ngClass]="{'selected': url == '/client'}" *ngIf="doIHavePermission(['ADMIN', 'SALES'])"
+     mat-tab-link routerLink="/client" routerLinkActive="active" (click)="onClick('Clientes')"
+     label="Clientes"><mat-icon>people</mat-icon></a>
+    
+    <!--Pedidos-->
+    <a [ngClass]="{'selected': url == '/orders'}" *ngIf="doIHavePermission(['ADMIN', 'SALES', 'DELIVERINGS', 'PREPARATION'])"
+     mat-tab-link routerLink="/orders" routerLinkActive="active" (click)="onClick('Pedidos')"
+     label="Pedidos"><mat-icon>local_shipping</mat-icon></a>
+  
+    <!--Administrador-->
+    <a [ngClass]="{'selected': url == '/admin'}" *ngIf="doIHavePermission(['ADMIN'])"
+     mat-tab-link routerLink="/admin" routerLinkActive="active" (click)="onClick('Admin')"
+     label="Administrador"><mat-icon>settings</mat-icon></a>
+  
+  </nav>
+
+</div>

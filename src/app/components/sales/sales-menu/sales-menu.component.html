@@ -1,0 +1,26 @@
+<div class="menu-container">
+
+  <div class="container">
+    <div class="card" routerLink="/sales/new-order">
+      <span class="material-icons">add_shopping_cart</span>
+      <span>Nuevo pedido</span>
+    </div>
+    <div class="card" routerLink="/sales/orders-inprogress">
+      <span class="material-icons">local_grocery_store</span>
+      <span>Pedidos en curso</span>
+    </div>
+    <div class="card" routerLink="/sales/view-stocks">
+      <span class="material-icons">storefront</span>
+      <span>Ver Existencias</span>
+    </div>
+    <div class="card" (click)="openDialog()">
+        <span class="material-icons">history</span>
+        <span>Historial</span>
+    </div>
+    <!-- <div class="card" (click)="getHistory()">
+        <span class="material-icons">history</span>
+        <span>Historial</span>
+    </div> -->
+  </div>
+
+</div>

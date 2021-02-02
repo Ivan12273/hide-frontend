@@ -1,0 +1,32 @@
+<div class="section-container">
+
+  <div class="container" *ngIf="user">
+
+    <h1>{{ user.name }}</h1>
+    <div class="data-container">
+
+      <div class="data-group">
+        <div class="data-item">
+          <p class="attribute">Cumpleaños:</p>
+          <p class="sub">{{user.birthday}}</p>
+        </div>
+        <div class="data-item">
+          <p class="attribute">Email:</p>
+          <p class="sub">{{user.email}}</p>
+        </div>
+        <div class="data-item">
+          <p class="attribute">Rol:</p>
+          <p class="sub">{{user.role}}</p>
+        </div>
+      </div>
+      
+      <div class="buttons-group">
+        <button mat-raised-button [routerLink]="['/admin/admin-users/user-details/edit-user', user._id]" color="primary">Editar</button>
+        <button mat-raised-button (click)="openDialog(user._id)" color="warn">Eliminar</button>
+        <button mat-stroked-button [routerLink]="['/admin/admin-users']" color="primary">Regresar</button>
+      </div>
+
+    </div>
+  </div>  
+
+</div>

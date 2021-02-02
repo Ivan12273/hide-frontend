@@ -1,0 +1,9 @@
+<mat-dialog-content>
+  ¿En qué formato quiere exportar el historial?
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <!-- <button mat-button mat-dialog-close>Regresar</button> -->
+  <button mat-flat-button color="primary" (click)="getHistory('csv')" mat-dialog-close>CSV</button>
+  <button mat-flat-button color="primary" (click)="getHistory('pdf')" mat-dialog-close>PDF</button>
+</mat-dialog-actions>

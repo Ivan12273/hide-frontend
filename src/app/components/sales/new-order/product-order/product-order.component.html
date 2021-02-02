@@ -1,0 +1,34 @@
+<form [formGroup]="detailForm" class="data-container" (ngSubmit)="onSubmit()" >
+<!-- <form #productForm="ngForm" class="data-container"> -->
+  
+  <div class="data-group">
+    <div class="order-list" formArrayName="details">
+    <!-- <div class="order-list" *ngFor="let number of order?.details; trackBy: customTrackBy"> -->
+      <!-- <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i"> -->
+        <div *ngFor="let detail of details().controls; let i=index" [formGroupName]="i">
+        <!-- <div formArrayName="details"> -->
+          <mat-form-field class="product-data" appearance="fill">
+            <mat-label>Producto</mat-label>
+            <mat-select formControlName="product_id">
+              <mat-option *ngFor="let product of products" [value]="product._id">
+                {{product.name}} - 
+                <span matBadge="{{product.stock}}" matBadgeSize="medium"></span>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>  
+          <mat-form-field class="quantity-data" appearance="fill">
+            <mat-label>Cantidad</mat-label>
+            <input type="number" min="0" max="" matInput formControlName="quantity">
+          </mat-form-field>     
+        </div>
+    </div>
+    <a mat-stroked-button (click)="addDetail()">Añadir otro producto</a>          
+  </div>  
+  <div class="buttons-group">    
+    <button mat-raised-button type="submit" color="primary">Siguiente</button>
+    <button mat-stroked-button color="primary" [routerLink]="['/sales']">Cancelar</button>
+  </div>
+</form>
+<!-- 
+<br>
+{{this.detailForm.value | json}} -->

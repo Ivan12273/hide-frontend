@@ -1,0 +1,35 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Pedidos</h1>    
+    <div class="list-container list-table">
+      <table matSort (matSortChange)="sortData($event)" mat-table [dataSource]="dataSource" class="mat-elevation-z1" >      
+    
+        <!-- Date Column -->        
+        <ng-container matColumnDef="date">
+          <th mat-sort-header="date" mat-header-cell *matHeaderCellDef> Fecha </th>
+          <td mat-cell *matCellDef="let element" [routerLink]="url==='/orders' ? ['/orders/order-details', element._id]: ['/sales/orders-inprogress/order-details', element._id]"> 
+            {{ element.date | date:'hh:mm aa dd/MM/YY' }} </td>
+        </ng-container>
+      
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-sort-header="status" mat-header-cell *matHeaderCellDef> Estado </th>
+          <td mat-cell *matCellDef="let element" [routerLink]="url==='/orders' ? ['/orders/order-details', element._id]: ['/sales/orders-inprogress/order-details', element._id]"> 
+            <a href="status:{{element.status}}" class="sub">{{ element.status }}</a> </td>          
+        </ng-container>
+        
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator [hidePageSize]="true"
+      [length]="totalData" 
+      [pageSize]="7" 
+      showFirstLastButtons></mat-paginator>
+    </div>    
+    
+  </div>
+
+</div>

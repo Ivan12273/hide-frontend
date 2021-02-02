@@ -1,0 +1,46 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Registrar Producto</h1>
+    <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="data-container" >
+
+      <div class="data-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <!-- <input name="name" #name="ngModel" [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}" [formControl]="name" required> -->
+          <input matInput type="text" [formControl]="name" required>
+          <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Descripción</mat-label>
+          <!-- <input name="description" #description="ngModel" [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}"[formControl]="description" matInput> -->
+          <input matInput type="text" [formControl]="description">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Existencias</mat-label>
+          <!-- <input type="number" min="0" name="stock" #stock="ngModel" [(ngModel)]="product.stock" [ngModelOptions]="{standalone: true}" [formControl]="stock " matInput > -->
+          <input matInput type="number" min="0" [formControl]="stock">
+          <mat-error *ngIf="stock.invalid">{{getStockErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>        
+        <mat-form-field appearance="fill">
+          <mat-label>Precio (MXN)</mat-label>
+          <!-- <input type="number" min="0" name="price" #price="ngModel" [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}" matInput [formControl]="price" required> -->
+          <input matInput type="number" min="0" [formControl]="price" required>
+          <span matPrefix>$&nbsp;</span> 
+          <mat-error *ngIf="price.invalid">{{getPriceErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+      </div>
+
+      <div class="buttons-group">
+        <button mat-raised-button type="submit" color="primary">Crear</button>
+        <button mat-stroked-button [routerLink]="['/stocks']" color="primary">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>

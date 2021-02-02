@@ -1,0 +1,22 @@
+.data-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#total-price {  
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>Registrar Usuario</h1>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="data-container" >
+
+      <div class="data-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input name="name" #name="ngModel" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}" matInput required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Cumpleaños</mat-label>
+          <!-- <input name="birthday" #birthday="ngModel" [(ngModel)]="user.birthday" [ngModelOptions]="{standalone: true}" matInput required> -->
+          <input matInput [matDatepicker]="picker" #birthday="ngModel" [(ngModel)]="user.birthday" [ngModelOptions]="{standalone: true}" matInput required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input name="email" #email="ngModel" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" matInput required>
+        </mat-form-field>
+        <br>        
+        <mat-form-field appearance="fill">
+          <mat-label>Rol</mat-label>
+          <mat-select name="role" #role="ngModel" [(ngModel)]="user.role" [ngModelOptions]="{standalone: true}" required>
+            <mat-option value="ADMIN">Administrador</mat-option>
+            <mat-option value="USER">Usuario</mat-option>
+            <mat-option value="SALES">Ventas</mat-option>
+            <mat-option value="PREPARATION">Preparador</mat-option>
+            <mat-option value="STOCKS">Existencias</mat-option>
+            <mat-option value="DELIVERINGS">Repartidor</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="buttons-group">
+        <button mat-raised-button type="submit" color="primary">Crear</button>
+        <button mat-stroked-button [routerLink]="['/admin']" color="primary">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>

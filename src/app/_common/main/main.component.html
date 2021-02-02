@@ -1,0 +1,4 @@
+<app-header [route]="clickedRoute"></app-header>
+<img *ngIf="url==='/'" id="logo" src="/assets/hide-logo.png"> 
+<router-outlet></router-outlet>
+<app-footer (routeClicked)="childRouteClicked($event)"></app-footer>

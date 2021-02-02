@@ -1,0 +1,41 @@
+<form #clientForm="ngForm" class="data-container" (ngSubmit)="onSubmit()">
+
+  <div class="data-group">
+    
+    <div class="client-details">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cliente</mat-label>
+        <mat-select [formControl]="client_id">
+          <mat-option (click)="getClient(client._id)" *ngFor="let client of clients" [value]="client._id" required>
+            {{client.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field *ngIf="client" appearance="fill">
+        <mat-label>Dirección</mat-label>
+        <mat-select [formControl]="address">
+          <mat-option *ngFor="let location of client?.location;let j=index" [value]="client.location[j]" required>
+            {{location.address}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>     
+      <mat-form-field *ngIf="client" appearance="fill">
+        <mat-label>Teléfono</mat-label>
+        <mat-select [formControl]="phone">
+          <mat-option *ngFor="let phone of client?.phone;let i=index" [value]="client.phone[i]" required>
+            {{phone}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>    
+    </div>
+  </div>
+
+  <div class="buttons-group">
+    <div id="total-price" >
+      <!-- <span *ngIf="order">Precio total: {{ order.total_amount }}</span> -->
+    </div>
+    <button mat-raised-button type="submit" color="primary" (click)="makeOrder()">Crear</button>
+    <button mat-stroked-button color="primary" [routerLink]="['/sales/new-order']" >Atras</button>
+  </div>
+</form>

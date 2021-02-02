@@ -1,0 +1,56 @@
+<div class="section-container">
+
+  <div class="container">
+
+    <h1>{{ order?.client_id?.name }}</h1>
+    <form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)" class="data-container" *ngIf="order">
+
+      <div class="data-group">
+        <div class="data-item">
+          <p class="attribute">Detalles:</p>
+          <div *ngFor="let detail of order?.details">
+            <p class="sub">{{detail?.product_id?.name}} - {{detail?.quantity}}pz</p>
+          </div>                             
+        </div>
+        <div class="data-item row">
+          <p class="attribute">Fecha:</p>
+          <p class="sub">{{ order?.date | date:'hh:mm aa dd/MM/YY' }}</p>
+        </div>
+        <div class="data-item">
+          <p class="attribute">Dirección:</p>
+          <p class="sub">{{ order?.address }}</p>
+        </div>
+        <div class="data-item row">          
+          <p class="attribute">Teléfono:</p>
+          <p class="sub">{{ order?.phone }}</p>
+          <a href="tel:{{ order?.phone }}"><mat-icon>phone</mat-icon></a>          
+        </div>
+        <div class="data-item row">          
+          <p class="attribute">Estado:</p>
+          <p class="sub">{{ orderStatus }}</p>          
+        </div>
+        <div class="data-item row">          
+          <p class="attribute">Monto:</p>
+          <p class="sub">{{ '$' + order.total_amount + '.00 MXN'}}</p>          
+        </div>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Nuevo estado</mat-label>
+          <mat-select name="status" #status="ngModel" [(ngModel)]="order.status" [ngModelOptions]="{standalone: true}" required>
+          <!-- <mat-select name="status" required> -->
+            <mat-option *ngIf="role === 'ADMIN' || 'SALES' || 'PREPARATION'" value="Preparación">En Preparación</mat-option>
+            <mat-option *ngIf="role === 'ADMIN' || 'SALES' || 'PREPARATION'" value="Preparado">Preparado</mat-option>
+            <mat-option *ngIf="role === 'ADMIN' || 'SALES' || 'DELIVERINGS'" value="Transito">En Tránsito</mat-option>
+            <mat-option *ngIf="role === 'ADMIN' || 'SALES' || 'DELIVERINGS'" value="Entregado">Entregado</mat-option>
+            <!-- <mat-option *ngIf="role === 'ADMIN' || 'SALES' || 'DELIVERINGS'" value="Cancelado">Cancelado</mat-option> -->
+          </mat-select>
+        </mat-form-field>
+      </div>    
+      <div class="buttons-group">
+        <button mat-raised-button type="submit" color="primary">Actualizar</button>
+        <button mat-raised-button type="button" (click)="openDialog(order)" color="warn">Cancelar</button>
+        <button mat-stroked-button [routerLink]="parentUrl==='/orders' ? ['/orders'] :['/sales/orders-inprogress']" color="primary">Regresar</button>
+      </div>      
+    </form>
+  </div>  
+</div>
